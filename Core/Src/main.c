@@ -70,7 +70,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-	TIM1->CCR1 = 16383; // 0.25% of 65535, 25% duty cycle
+
 
   /* USER CODE END 1 */
 
@@ -95,6 +95,7 @@ int main(void)
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+  TIM1->CCR1 = 16383; // 0.25% of 65535, 25% duty cycle
   /* USER CODE END 2 */
 
   /* Initialize leds */
